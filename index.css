@@ -1,0 +1,60 @@
+.all {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item1 {
+    width: 364px;
+    height: 199px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item2 {
+    display: block;
+    width: 368px;
+    height: 275px;
+    background-color: black;
+}
+span{
+    color: white;
+}
+.onetext{
+    padding: 30px;
+}
+.men{
+    font-size: 24px;
+}
+.text2{
+    margin-left: 30px;
+    margin-top: -11px;
+}
+.you{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.56);
+}
+.end{
+    display: flex;
+    margin-top: 16px;
+    margin-left: 52px;
+}
+.text{
+    font-size: 24px;
+    color: white
+}
+.two, .three{
+    margin-left: 43px;
+}
+.button{
+    width: 305px;
+    height: 55px;
+    background-color: #1F86FF;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 30px;
+
+}
