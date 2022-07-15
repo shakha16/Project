@@ -1,6 +1,44 @@
-let all = document.querySelector('.all')
+let all1 = document.querySelector('.all')
+let all2 = document.querySelector('.all2')
 
-for(item of [1,2,3,4,5,6,7]){
+let alld = document.createElement('div')
+let hidden = document.createElement('div')
+
+let span = document.createElement('span')
+let num = document.createElement('span')
+
+let but1 = document.createElement('button')
+let but2 = document.createElement('button')
+
+
+alld.classList.add('alld')
+hidden.classList.add('hidden')
+
+span.innerHTML = 'В корзине: ㅤтовар'
+span.classList.add('span')
+num.innerHTML = 0
+num.classList.add('num')
+
+but1.classList.add('but1')
+but1.innerHTML = 'Показать первые 5'
+but2.classList.add('but2')
+but2.innerHTML = 'Показать все'
+
+
+all1.append(alld, but1, but2)
+
+alld.append(span, num)
+
+
+
+let arr = [1,2,3,4,5,6,7]
+let arr2 = [1,2,3,4,5]
+
+
+
+
+
+for(item of arr){
     itemBox(item)
 }
 function itemBox(item) {
@@ -23,6 +61,7 @@ function itemBox(item) {
     let text3 = document.createElement('span')
     
     let button = document.createElement('button')
+    let buttonh = document.createElement('button')
     
     
     
@@ -51,6 +90,8 @@ function itemBox(item) {
     
     button.classList.add('button')
     button.innerHTML = 'В избранное'
+    buttonh.classList.add('buttonh')
+    buttonh.innerHTML = 'Добавлено'
     
     
     item4.append(item1, item2)
@@ -63,5 +104,26 @@ function itemBox(item) {
     two.append(text2_0)
     three.append(text3)
     
-    all.append(item4)
+    all2.append(item4, hidden)
+
+
+
+    
+    button.onclick = () => {
+        num++
+        button.classList.toggle('buttonh')
+        if(button.classList.contains('buttonh')){
+            button.innerHTML = 'Добавлено'
+        } else{
+            button.innerHTML = 'В избранное'
+        }
+    }
+}
+but1.onclick = () => {
+    hidden.style.backgroundColor = "white"
+    hidden.style.zIndex = "2"
+}
+but2.onclick = () => {
+    hidden.style.zIndex = "-2"
+    hidden.style.background = "none"
 }
