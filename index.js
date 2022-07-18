@@ -325,13 +325,21 @@ function reload(arr2) {
             button.classList.toggle('buttonh')
             if (button.classList.contains('buttonh')) {
                 button.innerHTML = 'Добавлено'
-                console.log(item);
-            } else {    
-                button.innerHTML = 'В избранное'
+                izbr2.push(item3)
                 console.log();
+            } else {    
+                num--
+                button.innerHTML = 'В избранное'
             }
         }
     }
 }
 
 reload(arr)
+
+
+let izbr = document.querySelector('.izbr')
+
+let izbr2 = []
+
+izbr.append(izbr2)
